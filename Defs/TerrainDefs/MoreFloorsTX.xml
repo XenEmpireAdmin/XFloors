@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TerrainDefs>
+ 
+	<!-- Chequered floors -->
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  
+  <TerrainDef ParentName="FloorBaseStoneChequered">
+		<defName>FloorStoneCheckEmpObs</defName>
+		<Label>chequered slabs (Emperadordark / Obsidian)</Label>
+    <texturePath>Terrain/Surfaces/CheckObsEmpD</texturePath>
+    <RenderPrecedence>265</RenderPrecedence>
+    <CostList>
+      <BlocksObsidian>2</BlocksObsidian>
+      <BlocksEmperadordark>2</BlocksEmperadordark>
+    </CostList>
+	</TerrainDef>
+	
+	  <TerrainDef ParentName="FloorBaseStoneChequered">
+		<defName>FloorStoneCheckObsBasalt</defName>
+		<Label>chequered slabs (Basalt / Obsidian)</Label>
+    <texturePath>Terrain/Surfaces/CheckObsBasalt</texturePath>
+    <RenderPrecedence>265</RenderPrecedence>
+    <CostList>
+      <BlocksObsidian>2</BlocksObsidian>
+      <BlocksBasalt>2</BlocksBasalt>
+    </CostList>
+	</TerrainDef>
+	
+	
+	  <TerrainDef Name="FloorBenito">
+    <defName>FloorBenito</defName>
+		<Label>Benitoite floor</Label>
+  	<Description>A stunning floor made from polished slabs of solid Benitoite. You can barely see where the tiles join! Fantastically beautiful but also requires a very long time to build.</Description>
+		<texturePath>Terrain/Surfaces/BenFloor</texturePath>
+    <EdgeType>Hard</EdgeType>
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+	  <Cleanliness>0.9</Cleanliness>
+      <Beauty>9</Beauty>
+    </statBases>
+    <CostList>
+      <Benitoite>10</Benitoite>
+    </CostList>
+    <designationCategory>MoreFloors</designationCategory>
+    <Fertility>0</Fertility>
+	  <constructEffect>ConstructMetal</constructEffect>
+    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
+  
+  
+  
+  	  <TerrainDef Name="FloorMarbleX">
+    <defName>FloorMarbleX</defName>
+		<Label>Polished Marble floor</Label>
+  	<Description>A stunning floor made from polished slabs of solid marble. You can barely see where the tiles join! Fantastically beautiful but also requires a very long time to build.</Description>
+		<texturePath>Terrain/Surfaces/MarFloor</texturePath>
+    <EdgeType>Hard</EdgeType>
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+	  <Cleanliness>0.9</Cleanliness>
+      <Beauty>9</Beauty>
+    </statBases>
+    <CostList>
+      <BlocksMarble>10</BlocksMarble>
+    </CostList>
+    <designationCategory>MoreFloors</designationCategory>
+    <Fertility>0</Fertility>
+	  <constructEffect>ConstructMetal</constructEffect>
+    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
+  
+  	<TerrainDef Name="XX_TerrainBase" Abstract="True">
+		<EdgeType>FadeRough</EdgeType>
+		<RenderPrecedence>335</RenderPrecedence>
+		<designationCategory>Floors</designationCategory>
+		<constructEffect>ConstructDirt</constructEffect>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>GrowSoil</li>
+			<li>Diggable</li>
+		</affordances>
+		<TakeFootprints>True</TakeFootprints>
+	</TerrainDef>
+  
+     <TerrainDef ParentName="SS_TerrainBase">
+		<defName>LawnX</defName>
+		<label>Lawn</label>
+		<Description>Green tended lawns for arboretums</Description>
+		<texturePath>Terrain/Surfaces/XenSoil</texturePath>
+		<PathCost>0</PathCost>
+		<layerable>true</layerable>
+    <statBases>
+      <Beauty>5</Beauty>
+	  <Cleanliness>0.3</Cleanliness>
+      <WorkToBuild>2000</WorkToBuild>
+    </statBases>
+    <CostList>
+	  <Gold>1</Gold>
+	  <Cloth>2</Cloth>
+	  <Steel>3</Steel>
+	  <Xenium>1</Xenium>
+    </CostList>
+		<Fertility>50.0</Fertility>
+		<terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+		<researchPrerequisites><li>ultrasoil</li></researchPrerequisites>
+	</TerrainDef>
+	
+	     <TerrainDef ParentName="SS_TerrainBase">
+		<defName>LawnXLite</defName>
+		<label>Xenium infused soil</label>
+		<Description>Infuse soil with Xenium to make stuff grow gud.</Description>
+		<texturePath>Terrain/Surfaces/XenSoil</texturePath>
+		<PathCost>0</PathCost>
+		<layerable>true</layerable>
+    <statBases>
+      <Beauty>5</Beauty>
+	  <Cleanliness>0.3</Cleanliness>
+      <WorkToBuild>2000</WorkToBuild>
+    </statBases>
+    <CostList>
+	  <Xenium>2</Xenium>
+    </CostList>
+		<Fertility>2</Fertility>
+		<terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+	</TerrainDef>
+
+  
+</TerrainDefs>
