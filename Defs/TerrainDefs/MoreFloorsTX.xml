@@ -83,6 +83,34 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
   </TerrainDef>
   
+  	  <TerrainDef Name="FloorObsidX">
+    <defName>FloorObsidX</defName>
+		<Label>Polished Obsidian floor</Label>
+  	<Description>A stunning floor made from polished slabs of solid marble. You can barely see where the tiles join! Fantastically beautiful but also requires a very long time to build.</Description>
+		<texturePath>Terrain/Surfaces/ObsFloor</texturePath>
+    <EdgeType>Hard</EdgeType>
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>SmoothHard</li>
+    </affordances>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+	  <Cleanliness>0.9</Cleanliness>
+      <Beauty>9</Beauty>
+    </statBases>
+    <CostList>
+      <BlocksObsidian>10</BlocksObsidian>
+    </CostList>
+    <designationCategory>MoreFloors</designationCategory>
+    <Fertility>0</Fertility>
+	  <constructEffect>ConstructMetal</constructEffect>
+    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
+  
+  
   	<TerrainDef Name="XX_TerrainBase" Abstract="True">
 		<EdgeType>FadeRough</EdgeType>
 		<RenderPrecedence>335</RenderPrecedence>
